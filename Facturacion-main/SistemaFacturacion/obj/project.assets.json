@@ -4724,23 +4724,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\benal\\.nuget\\packages\\": {},
-    "D:\\Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Daniel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\benal\\OneDrive\\Escritorio\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\SistemaFacturacion.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\SistemaFacturacion.csproj",
       "projectName": "SistemaFacturacion",
-      "projectPath": "C:\\Users\\benal\\OneDrive\\Escritorio\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\SistemaFacturacion.csproj",
-      "packagesPath": "C:\\Users\\benal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\benal\\OneDrive\\Escritorio\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\obj\\",
+      "projectPath": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\SistemaFacturacion.csproj",
+      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\benal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4749,6 +4749,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4767,7 +4768,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -4815,7 +4816,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

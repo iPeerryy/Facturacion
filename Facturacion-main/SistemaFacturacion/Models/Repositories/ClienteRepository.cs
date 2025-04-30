@@ -1,13 +1,15 @@
 ﻿using SistemaFacturacion.Models.Context;
 using SistemaFacturacion.Models.Entities;
-using SistemaFacturacion.Models.Interfaces;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static SistemaFacturacion.Models.Entities.Cliente;
+using static SistemaFacturacion.Models.Entities.Producto;
 
 namespace Facturacion.Models.Repositories
 {
-    public class ClienteRepository : ICliente<Cliente>
+    public class ClienteRepository 
     {
         private readonly CafeteriaContext _context;
 
@@ -18,11 +20,13 @@ namespace Facturacion.Models.Repositories
 
         public void AgregarCliente(Cliente cliente)
         {
-            if (_context.Clientes.Any(c => c.cedula == cliente.cedula))
-                throw new Exception("Ya existe un cliente con esta cédula.");
+            using (var context = new CafeteriaContext())
+            {
+                _context.Clientes.Add(cliente);
+                _context.SaveChanges();
+            }
 
-            _context.Clientes.Add(cliente);
-            _context.SaveChanges();
+            
         }
 
         public void ActualizarCliente(Cliente cliente)

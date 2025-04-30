@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaFacturacion.Models.Context;
 
@@ -11,9 +12,11 @@ using SistemaFacturacion.Models.Context;
 namespace SistemaFacturacion.Migrations
 {
     [DbContext(typeof(CafeteriaContext))]
-    partial class CafeteriaContextModelSnapshot : ModelSnapshot
+    [Migration("20250430180824_cliente")]
+    partial class cliente
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,16 +69,11 @@ namespace SistemaFacturacion.Migrations
                     b.Property<int>("productoid")
                         .HasColumnType("int");
 
-                    b.Property<int>("reservaid")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("empleadocedula");
 
                     b.HasIndex("productoid");
-
-                    b.HasIndex("reservaid");
 
                     b.ToTable("Pedidos");
                 });
@@ -118,17 +116,20 @@ namespace SistemaFacturacion.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<string>("ClienteId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("estado")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("nombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<TimeSpan>("hora")
+                        .HasColumnType("time");
 
-                    b.Property<double>("precio")
+                    b.Property<double>("total")
                         .HasColumnType("float");
 
                     b.HasKey("id");
@@ -148,17 +149,9 @@ namespace SistemaFacturacion.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SistemaFacturacion.Models.Entities.Reserva", "reserva")
-                        .WithMany()
-                        .HasForeignKey("reservaid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("empleado");
 
                     b.Navigation("producto");
-
-                    b.Navigation("reserva");
                 });
 #pragma warning restore 612, 618
         }

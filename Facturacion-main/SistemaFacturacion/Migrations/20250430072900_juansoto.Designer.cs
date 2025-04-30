@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaFacturacion.Models.Context;
 
@@ -11,9 +12,11 @@ using SistemaFacturacion.Models.Context;
 namespace SistemaFacturacion.Migrations
 {
     [DbContext(typeof(CafeteriaContext))]
-    partial class CafeteriaContextModelSnapshot : ModelSnapshot
+    [Migration("20250430072900_juansoto")]
+    partial class juansoto
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,6 +24,23 @@ namespace SistemaFacturacion.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("SistemaFacturacion.Models.Entities.Cliente", b =>
+                {
+                    b.Property<string>("cedula")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("esFrecuente")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("cedula");
+
+                    b.ToTable("Clientes");
+                });
 
             modelBuilder.Entity("SistemaFacturacion.Models.Entities.Empleado", b =>
                 {
@@ -60,22 +80,22 @@ namespace SistemaFacturacion.Migrations
                     b.Property<double>("Total")
                         .HasColumnType("float");
 
+                    b.Property<string>("clientecedula")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("empleadocedula")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("productoid")
                         .HasColumnType("int");
 
-                    b.Property<int>("reservaid")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("clientecedula");
 
                     b.HasIndex("empleadocedula");
 
                     b.HasIndex("productoid");
-
-                    b.HasIndex("reservaid");
 
                     b.ToTable("Pedidos");
                 });
@@ -118,26 +138,35 @@ namespace SistemaFacturacion.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<string>("ClienteId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<bool>("estado")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("nombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<TimeSpan>("hora")
+                        .HasColumnType("time");
 
-                    b.Property<double>("precio")
+                    b.Property<double>("total")
                         .HasColumnType("float");
 
                     b.HasKey("id");
+
+                    b.HasIndex("ClienteId");
 
                     b.ToTable("Reservas");
                 });
 
             modelBuilder.Entity("SistemaFacturacion.Models.Entities.Pedido", b =>
                 {
+                    b.HasOne("SistemaFacturacion.Models.Entities.Cliente", "cliente")
+                        .WithMany()
+                        .HasForeignKey("clientecedula");
+
                     b.HasOne("SistemaFacturacion.Models.Entities.Empleado", "empleado")
                         .WithMany()
                         .HasForeignKey("empleadocedula");
@@ -148,17 +177,22 @@ namespace SistemaFacturacion.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SistemaFacturacion.Models.Entities.Reserva", "reserva")
-                        .WithMany()
-                        .HasForeignKey("reservaid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("cliente");
 
                     b.Navigation("empleado");
 
                     b.Navigation("producto");
+                });
 
-                    b.Navigation("reserva");
+            modelBuilder.Entity("SistemaFacturacion.Models.Entities.Reserva", b =>
+                {
+                    b.HasOne("SistemaFacturacion.Models.Entities.Cliente", "cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("cliente");
                 });
 #pragma warning restore 612, 618
         }

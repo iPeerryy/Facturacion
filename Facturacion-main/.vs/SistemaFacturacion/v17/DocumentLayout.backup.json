@@ -1,30 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\",
+  "WorkspaceRootPath": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\benal\\downloads\\agregar clientes\\facturacion-main\\sistemafacturacion\\controllers\\reserva\\ctragregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\controllers\\reserva\\ctragregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\controllers\\reserva\\ctragregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\sistemafacturacion\\controllers\\reserva\\ctragregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\sistemafacturacion\\controllers\\reserva\\ctragregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\controllers\\reserva\\ctragregarreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\benal\\downloads\\agregar clientes\\facturacion-main\\sistemafacturacion\\models\\entities\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\models\\entities\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\models\\entities\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\benal\\downloads\\agregar clientes\\facturacion-main\\sistemafacturacion\\models\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\models\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\benal\\downloads\\agregar clientes\\facturacion-main\\sistemafacturacion\\models\\repositories\\reservarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\models\\repositories\\reservarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\models\\repositories\\reservarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\benal\\downloads\\agregar clientes\\facturacion-main\\sistemafacturacion\\models\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\models\\context\\cafeteriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\models\\context\\cafeteriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\sistemafacturacion\\controllers\\productos\\ctractualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\controllers\\productos\\ctractualizarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\models\\entities\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\models\\entities\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\models\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\models\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\sistemafacturacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\models\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\models\\entities\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|c:\\users\\daniel\\desktop\\agregarclientes\\facturacion-main\\sistemafacturacion\\models\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC88678A-148B-46AF-AF39-3B062B52AAE4}|SistemaFacturacion\\SistemaFacturacion.csproj|solutionrelative:sistemafacturacion\\models\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +58,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Form1.cs",
+              "RelativeDocumentMoniker": "SistemaFacturacion\\Form1.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Form1.cs [Design]",
+              "RelativeToolTip": "SistemaFacturacion\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T08:01:07.625Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Form1.cs",
+              "RelativeDocumentMoniker": "SistemaFacturacion\\Form1.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Form1.cs",
+              "RelativeToolTip": "SistemaFacturacion\\Form1.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAQwFsAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T06:14:50.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Pedido.cs",
+              "RelativeDocumentMoniker": "SistemaFacturacion\\Models\\Entities\\Pedido.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Pedido.cs",
+              "RelativeToolTip": "SistemaFacturacion\\Models\\Entities\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T18:09:29.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Producto.cs",
+              "RelativeDocumentMoniker": "SistemaFacturacion\\Models\\Entities\\Producto.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Producto.cs",
+              "RelativeToolTip": "SistemaFacturacion\\Models\\Entities\\Producto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T08:02:15.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CtrActualizarProducto.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Productos\\CtrActualizarProducto.cs",
+              "RelativeDocumentMoniker": "SistemaFacturacion\\Controllers\\Productos\\CtrActualizarProducto.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Productos\\CtrActualizarProducto.cs [Design]",
+              "RelativeToolTip": "SistemaFacturacion\\Controllers\\Productos\\CtrActualizarProducto.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T06:51:30.085Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CafeteriaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Context\\CafeteriaContext.cs",
+              "RelativeDocumentMoniker": "SistemaFacturacion\\Models\\Context\\CafeteriaContext.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Context\\CafeteriaContext.cs",
+              "RelativeToolTip": "SistemaFacturacion\\Models\\Context\\CafeteriaContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wCEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T06:17:45.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ClienteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Models\\Repositories\\ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Repositories\\ClienteRepository.cs",
               "RelativeDocumentMoniker": "SistemaFacturacion\\Models\\Repositories\\ClienteRepository.cs",
-              "ToolTip": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Models\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Repositories\\ClienteRepository.cs",
               "RelativeToolTip": "SistemaFacturacion\\Models\\Repositories\\ClienteRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wDgAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T03:59:45.959Z",
               "EditorCaption": ""
@@ -53,24 +158,24 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CtrAgregarReserva.cs",
-              "DocumentMoniker": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs",
               "RelativeDocumentMoniker": "SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs",
-              "ToolTip": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs",
-              "RelativeToolTip": "SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAjwCAAAAAQAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs*",
+              "RelativeToolTip": "SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T03:11:37.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ReservaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Models\\Repositories\\ReservaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Repositories\\ReservaRepository.cs",
               "RelativeDocumentMoniker": "SistemaFacturacion\\Models\\Repositories\\ReservaRepository.cs",
-              "ToolTip": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Models\\Repositories\\ReservaRepository.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Repositories\\ReservaRepository.cs",
               "RelativeToolTip": "SistemaFacturacion\\Models\\Repositories\\ReservaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T02:47:09.929Z",
               "EditorCaption": ""
@@ -79,24 +184,24 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Reserva.cs",
-              "DocumentMoniker": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Reserva.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Reserva.cs",
               "RelativeDocumentMoniker": "SistemaFacturacion\\Models\\Entities\\Reserva.cs",
-              "ToolTip": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Reserva.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Reserva.cs",
               "RelativeToolTip": "SistemaFacturacion\\Models\\Entities\\Reserva.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T22:53:00.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Cliente.cs",
               "RelativeDocumentMoniker": "SistemaFacturacion\\Models\\Entities\\Cliente.cs",
-              "ToolTip": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Models\\Entities\\Cliente.cs",
               "RelativeToolTip": "SistemaFacturacion\\Models\\Entities\\Cliente.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T22:54:56.074Z",
               "EditorCaption": ""
@@ -104,14 +209,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CtrAgregarReserva.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs",
+              "Title": "CtrAgregarReserva.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs",
               "RelativeDocumentMoniker": "SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs",
-              "ToolTip": "C:\\Users\\benal\\Downloads\\Agregar Clientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Daniel\\Desktop\\AgregarClientes\\Facturacion-main\\SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs [Design]*",
+              "RelativeToolTip": "SistemaFacturacion\\Controllers\\Reserva\\CtrAgregarReserva.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T03:07:12.998Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -31,7 +31,7 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            btnAgregarClientes = new Button();
+            btnAgregarReserva = new Button();
             btnEliminar = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -39,7 +39,6 @@
             panel3 = new Panel();
             label2 = new Label();
             panelReemplazable = new Panel();
-            btnAgregarReserva = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -67,7 +66,6 @@
             // panel2
             // 
             panel2.Controls.Add(btnAgregarReserva);
-            panel2.Controls.Add(btnAgregarClientes);
             panel2.Controls.Add(btnEliminar);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
@@ -79,16 +77,16 @@
             panel2.Size = new Size(206, 551);
             panel2.TabIndex = 1;
             // 
-            // btnAgregarClientes
+            // btnAgregarReserva
             // 
-            btnAgregarClientes.Dock = DockStyle.Top;
-            btnAgregarClientes.Location = new Point(0, 264);
-            btnAgregarClientes.Name = "btnAgregarClientes";
-            btnAgregarClientes.Size = new Size(206, 55);
-            btnAgregarClientes.TabIndex = 6;
-            btnAgregarClientes.Text = "Agregar Clientes";
-            btnAgregarClientes.UseVisualStyleBackColor = true;
-            btnAgregarClientes.Click += btnAgregarClientes_Click;
+            btnAgregarReserva.Dock = DockStyle.Top;
+            btnAgregarReserva.Location = new Point(0, 264);
+            btnAgregarReserva.Name = "btnAgregarReserva";
+            btnAgregarReserva.Size = new Size(206, 55);
+            btnAgregarReserva.TabIndex = 7;
+            btnAgregarReserva.Text = "Agregar Reserva";
+            btnAgregarReserva.UseVisualStyleBackColor = true;
+            btnAgregarReserva.Click += btnAgregarReserva_Click;
             // 
             // btnEliminar
             // 
@@ -163,17 +161,6 @@
             panelReemplazable.TabIndex = 2;
             panelReemplazable.Paint += panelReemplazable_Paint;
             // 
-            // btnAgregarReserva
-            // 
-            btnAgregarReserva.Dock = DockStyle.Top;
-            btnAgregarReserva.Location = new Point(0, 319);
-            btnAgregarReserva.Name = "btnAgregarReserva";
-            btnAgregarReserva.Size = new Size(206, 55);
-            btnAgregarReserva.TabIndex = 7;
-            btnAgregarReserva.Text = "Agregar Reserva";
-            btnAgregarReserva.UseVisualStyleBackColor = true;
-            btnAgregarReserva.Click += btnAgregarReserva_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -205,7 +192,6 @@
         private Button button2;
         private Button button3;
         private Button btnEliminar;
-        private Button btnAgregarClientes;
         private Button btnAgregarReserva;
     }
 }

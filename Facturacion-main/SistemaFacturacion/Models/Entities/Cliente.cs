@@ -11,22 +11,12 @@ namespace SistemaFacturacion.Models.Entities
     public class Cliente : Persona
     {
         [Key]
-        public  string cedula { get; set; } // Clave primaria
+        public string cedula { get; set; } 
         public string nombre { get; set; }
         public bool esFrecuente { get; set; }
+      
     }
 }
 
-namespace SistemaFacturacion.Models.Interfaces
-{
-    public interface ICliente<T>
-    {
-        void AgregarCliente(T cliente);
-        void ActualizarCliente(T cliente);
-        void EliminarCliente(string cedula);
-        T ObtenerCliente(string cedula);
-        List<T> ObtenerTodos();
-    }
-}
     
 

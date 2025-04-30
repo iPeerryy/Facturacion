@@ -31,11 +31,8 @@ namespace SistemaFacturacion.Models.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<ProductoPedido>();
-            modelBuilder.Entity<Reserva>()
-            .HasOne(r => r.cliente)  // Una reserva tiene un cliente
-            .WithMany()  // Un cliente puede tener muchas reservas
-            .HasForeignKey(r => r.ClienteId)  // La clave foránea es ClienteId
-            .OnDelete(DeleteBehavior.Restrict);  // Opcional: especificar comportamiento en caso de eliminación del cliente
+            modelBuilder.Ignore<Cliente>();
+
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

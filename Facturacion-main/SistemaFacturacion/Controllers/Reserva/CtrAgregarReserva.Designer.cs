@@ -29,40 +29,31 @@
         private void InitializeComponent()
         {
             dtpFecha = new DateTimePicker();
-            dtpHora = new DateTimePicker();
-            txtCedulaCliente = new TextBox();
+            txtNombreCliente = new TextBox();
             btnHacerReserva = new Button();
             label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             SuspendLayout();
             // 
             // dtpFecha
             // 
-            dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.CustomFormat = "MM/dd/yyyy hh:mm tt";
+            dtpFecha.Format = DateTimePickerFormat.Custom;
             dtpFecha.Location = new Point(134, 92);
             dtpFecha.Name = "dtpFecha";
             dtpFecha.Size = new Size(200, 23);
             dtpFecha.TabIndex = 0;
             // 
-            // dtpHora
+            // txtNombreCliente
             // 
-            dtpHora.Format = DateTimePickerFormat.Time;
-            dtpHora.Location = new Point(369, 92);
-            dtpHora.Name = "dtpHora";
-            dtpHora.Size = new Size(200, 23);
-            dtpHora.TabIndex = 1;
-            // 
-            // txtCedulaCliente
-            // 
-            txtCedulaCliente.Location = new Point(618, 92);
-            txtCedulaCliente.Name = "txtCedulaCliente";
-            txtCedulaCliente.Size = new Size(100, 23);
-            txtCedulaCliente.TabIndex = 2;
+            txtNombreCliente.Location = new Point(415, 95);
+            txtNombreCliente.Name = "txtNombreCliente";
+            txtNombreCliente.Size = new Size(100, 23);
+            txtNombreCliente.TabIndex = 2;
             // 
             // btnHacerReserva
             // 
-            btnHacerReserva.Location = new Point(377, 305);
+            btnHacerReserva.Location = new Point(335, 266);
             btnHacerReserva.Name = "btnHacerReserva";
             btnHacerReserva.Size = new Size(192, 86);
             btnHacerReserva.TabIndex = 3;
@@ -79,34 +70,23 @@
             label1.TabIndex = 4;
             label1.Text = "Fecha";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(440, 60);
-            label2.Name = "label2";
-            label2.Size = new Size(33, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Hora";
-            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(642, 60);
+            label3.Location = new Point(443, 60);
             label3.Name = "label3";
-            label3.Size = new Size(44, 15);
+            label3.Size = new Size(51, 15);
             label3.TabIndex = 6;
-            label3.Text = "Cédula";
+            label3.Text = "Nombre";
             // 
             // CtrAgregarReserva
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnHacerReserva);
-            Controls.Add(txtCedulaCliente);
-            Controls.Add(dtpHora);
+            Controls.Add(txtNombreCliente);
             Controls.Add(dtpFecha);
             Name = "CtrAgregarReserva";
             Size = new Size(1130, 651);
@@ -118,11 +98,9 @@
         #endregion
 
         private DateTimePicker dtpFecha;
-        private DateTimePicker dtpHora;
-        private TextBox txtCedulaCliente;
+        private TextBox txtNombreCliente;
         private Button btnHacerReserva;
         private Label label1;
-        private Label label2;
         private Label label3;
     }
 }

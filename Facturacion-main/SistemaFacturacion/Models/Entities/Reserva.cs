@@ -7,26 +7,19 @@ namespace SistemaFacturacion.Models.Entities
     {
         [Key]
         public int id { get; set; }
-
+        public string nombre { get; set; }
         public DateTime fecha { get; set; }
-        public TimeSpan hora { get; set; }
-        public double total { get; set; }
-
-        public string ClienteId { get; set; } 
-        public Cliente cliente { get; set; }  
+        public double precio { get; set; }
         public bool estado { get; set; } = true;
-    }
 
 
-
-    namespace SistemaFacturacion.Models.Interfaces
-    {
         public interface IReserva<T>
         {
             void HacerReserva(T reserva);
             void EliminarReserva(int id);
-            T ObtenerReserva(int id);
-            List<T> ObtenerTodas();
+           
+            
         }
     }
+    
 }

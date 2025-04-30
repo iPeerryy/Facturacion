@@ -12,7 +12,7 @@ namespace SistemaFacturacion.Models.Entities
         public DateTime Fecha { get; set; }
         public TimeSpan Hora { get; set; }
         public double Total { get; set; }
-        public Cliente cliente { get; set; }
+        public Reserva reserva { get; set; }
         public Empleado empleado { get; set; }
         public Producto producto { get; set; }
         public List<ProductoPedido> productos { get; set; } = new List<ProductoPedido>();

@@ -6,7 +6,7 @@ using SistemaFacturacion.Controllers.Productos;
 using SistemaFacturacion.Controllers.Reserva;
 using SistemaFacturacion.Models.Context;
 using SistemaFacturacion.Models.Entities;
-using SistemaFacturacion.Models.Interfaces;
+
 
 namespace SistemaFacturacion
 {
@@ -16,18 +16,21 @@ namespace SistemaFacturacion
         private readonly ProductoRepository _repository;
         private readonly ReservaRepository R_repository;
         private readonly ClienteRepository repository;
+        private readonly ClienteRepository C_repository;
 
-        public ICliente<Cliente> C_repository { get; private set; }
+       
 
         public Form1()
         {
             InitializeComponent();
             var options = new DbContextOptionsBuilder<CafeteriaContext>()
-               .UseSqlServer("Server=(localdb)\\Servidor;Database=CafeteriaDB;Trusted_Connection=True;Integrated Security=True")
+               .UseSqlServer("Server=(localdb)\\localDB;Database=CafeteriaDB;Trusted_Connection=True;Integrated Security=True")
                .Options;
             _dbContext = new CafeteriaContext(options);
             _repository = new ProductoRepository(_dbContext);
             repository = new ClienteRepository(_dbContext);
+            C_repository = new ClienteRepository(_dbContext);
+            R_repository = new ReservaRepository(_dbContext);
 
         }
         private void CargarControladorEnPanel(UserControl controlador)
@@ -78,15 +81,15 @@ namespace SistemaFacturacion
             CargarControladorEnPanel(ctrEliminarProducto);
         }
 
-        private void btnAgregarClientes_Click(object sender, EventArgs e)
-        {
-            CtrAgregarCliente ctrAgregarCliente = new CtrAgregarCliente(repository);
-            CargarControladorEnPanel(ctrAgregarCliente);
-        }
+        //private void btnAgregarClientes_Click(object sender, EventArgs e)
+        //{
+        //    CtrAgregarCliente ctrAgregarCliente = new CtrAgregarCliente(repository);
+        //    CargarControladorEnPanel(ctrAgregarCliente);
+        //}
 
         private void btnAgregarReserva_Click(object sender, EventArgs e)
         {
-            CtrAgregarReserva ctrAgregarReserva = new CtrAgregarReserva(R_repository, C_repository);
+            CtrAgregarReserva ctrAgregarReserva = new CtrAgregarReserva(R_repository);
             CargarControladorEnPanel(ctrAgregarReserva);
         }
     }

@@ -1,11 +1,13 @@
 ﻿using SistemaFacturacion.Models.Entities;
-using SistemaFacturacion.Models.Interfaces;
+
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using SistemaFacturacion.Models.Context;
-using SistemaFacturacion.Models.Entities.SistemaFacturacion.Models.Interfaces;
+using static SistemaFacturacion.Models.Entities.Reserva;
+using static SistemaFacturacion.Models.Entities.Cliente;
+
 
 namespace Facturacion.Models.Repositories
 {
@@ -20,8 +22,11 @@ namespace Facturacion.Models.Repositories
 
         public void HacerReserva(Reserva reserva)
         {
-            _context.Reservas.Add(reserva);
-            _context.SaveChanges();
+            using (var context = new CafeteriaContext())
+            {
+                _context.Reservas.Add(reserva);
+                _context.SaveChanges();
+            }
         }
 
         public void EliminarReserva(int id)
@@ -38,14 +43,8 @@ namespace Facturacion.Models.Repositories
             }
         }
 
-        public Reserva ObtenerReserva(int id)
-        {
-            return _context.Reservas.Include(r => r.cliente).FirstOrDefault(r => r.id == id);
-        }
+       
 
-        public List<Reserva> ObtenerTodas()
-        {
-            return _context.Reservas.Include(r => r.cliente).ToList();  // Aquí también puedes incluir al cliente si lo necesitas
-        }
+      
     }
 }
