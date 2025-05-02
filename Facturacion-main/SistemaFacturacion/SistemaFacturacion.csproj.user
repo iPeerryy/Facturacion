@@ -4,6 +4,9 @@
     <Compile Update="Controllers\Clientes\CtrAgregarCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Controllers\Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Controllers\Productos\CtrAbastecerProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>

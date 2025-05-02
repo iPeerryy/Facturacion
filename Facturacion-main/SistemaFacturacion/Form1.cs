@@ -2,10 +2,12 @@ using Facturacion.Models.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SistemaFacturacion.Controllers.Clientes;
+using SistemaFacturacion.Controllers.Login;
 using SistemaFacturacion.Controllers.Productos;
 using SistemaFacturacion.Controllers.Reserva;
 using SistemaFacturacion.Models.Context;
 using SistemaFacturacion.Models.Entities;
+using SistemaFacturacion.Models.Repositories;
 
 
 namespace SistemaFacturacion
@@ -17,12 +19,25 @@ namespace SistemaFacturacion
         private readonly ReservaRepository R_repository;
         private readonly ClienteRepository repository;
         private readonly ClienteRepository C_repository;
+        private readonly EmpleadoRepository E_repository;
 
-       
 
-        public Form1()
+
+        public Form1(EmpleadoRepository empleadorepository)
         {
             InitializeComponent();
+            E_repository= empleadorepository;
+
+            var loginForm = new LoginForm(E_repository);
+            if (loginForm.ShowDialog() != DialogResult.OK)
+            {
+                
+                Application.Exit();
+                return;
+            }
+            var empleado = (Empleado)loginForm.Tag;
+
+            MessageBox.Show($"Bienvenido, {empleado.nombre}.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             var options = new DbContextOptionsBuilder<CafeteriaContext>()
                .UseSqlServer("Server=(localdb)\\localDB;Database=CafeteriaDB;Trusted_Connection=True;Integrated Security=True")
                .Options;
@@ -31,14 +46,21 @@ namespace SistemaFacturacion
             repository = new ClienteRepository(_dbContext);
             C_repository = new ClienteRepository(_dbContext);
             R_repository = new ReservaRepository(_dbContext);
+            E_repository = new EmpleadoRepository(_dbContext);
 
         }
+      
         private void CargarControladorEnPanel(UserControl controlador)
         {
             controlador.Dock = DockStyle.Fill;
             panelReemplazable.Controls.Clear();
             panelReemplazable.Controls.Add(controlador);
             controlador.BringToFront();
+        }
+        private void CargarContenidoPrincipal()
+        {
+            // Example: Load a dashboard or main menu
+            MessageBox.Show("Cargando contenido principal...", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -91,6 +113,11 @@ namespace SistemaFacturacion
         {
             CtrAgregarReserva ctrAgregarReserva = new CtrAgregarReserva(R_repository);
             CargarControladorEnPanel(ctrAgregarReserva);
+        }
+
+        private void panelPrimario_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

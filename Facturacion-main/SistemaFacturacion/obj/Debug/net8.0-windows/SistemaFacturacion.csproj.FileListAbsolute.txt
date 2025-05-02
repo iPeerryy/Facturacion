@@ -736,3 +736,4 @@ C:\Users\Daniel\Desktop\AgregarClientes\Facturacion-main\SistemaFacturacion\obj\
 C:\Users\Daniel\Desktop\AgregarClientes\Facturacion-main\SistemaFacturacion\obj\Debug\net8.0-windows\SistemaFacturacion.pdb
 C:\Users\Daniel\Desktop\AgregarClientes\Facturacion-main\SistemaFacturacion\obj\Debug\net8.0-windows\SistemaFacturacion.genruntimeconfig.cache
 C:\Users\Daniel\Desktop\AgregarClientes\Facturacion-main\SistemaFacturacion\obj\Debug\net8.0-windows\ref\SistemaFacturacion.dll
+C:\Users\Daniel\Desktop\AgregarClientes\Facturacion-main\SistemaFacturacion\obj\Debug\net8.0-windows\SistemaFacturacion.Controllers.Login.LoginForm.resources

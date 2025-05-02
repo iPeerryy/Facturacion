@@ -48,9 +48,9 @@
             // 
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
+            panel1.Location = new Point(206, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1123, 58);
+            panel1.Size = new Size(917, 58);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -72,9 +72,9 @@
             panel2.Controls.Add(button1);
             panel2.Controls.Add(panel3);
             panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 58);
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(206, 551);
+            panel2.Size = new Size(206, 609);
             panel2.TabIndex = 1;
             // 
             // btnAgregarReserva
@@ -167,8 +167,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1123, 609);
             Controls.Add(panelReemplazable);
-            Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(panel2);
             Name = "Form1";
             Text = "Cafetería ";
             Load += Form1_Load;

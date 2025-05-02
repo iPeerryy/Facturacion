@@ -41,6 +41,22 @@ namespace SistemaFacturacion.Migrations
                     b.HasKey("cedula");
 
                     b.ToTable("Empleados");
+
+                    b.HasData(
+                        new
+                        {
+                            cedula = "4021356164",
+                            cargo = "Vendedor",
+                            nombre = "Adrian Sarcos",
+                            salario = 30000
+                        },
+                        new
+                        {
+                            cedula = "402654423",
+                            cargo = "Vendedor",
+                            nombre = "Valeria Suarez",
+                            salario = 30000
+                        });
                 });
 
             modelBuilder.Entity("SistemaFacturacion.Models.Entities.Pedido", b =>
