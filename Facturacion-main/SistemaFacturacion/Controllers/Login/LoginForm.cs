@@ -19,11 +19,19 @@ namespace SistemaFacturacion.Controllers.Login
         {
             _repository = repository;
             InitializeComponent();
+            textPassword.UseSystemPasswordChar = true;
+
+            this.AcceptButton = button1;
+            this.FormClosing += LoginForm_FormClosing;
         }
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
 
-        
-       
-
+            if (this.DialogResult != DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -37,7 +45,7 @@ namespace SistemaFacturacion.Controllers.Login
                     return;
                 }
 
-                // Authenticate the user
+              
                 var empleado = _repository.Autenticar(username, password);
 
                 if (empleado == null)
@@ -45,10 +53,10 @@ namespace SistemaFacturacion.Controllers.Login
                     MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
-                // If authentication is successful, close the form with DialogResult.OK
               
-                this.Tag = empleado; // Pass the authenticated employee to the main form
+
+
+                this.Tag = empleado; 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -57,5 +65,6 @@ namespace SistemaFacturacion.Controllers.Login
                 MessageBox.Show("Error al iniciar sesión:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

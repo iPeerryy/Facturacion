@@ -57,11 +57,7 @@ namespace SistemaFacturacion
             panelReemplazable.Controls.Add(controlador);
             controlador.BringToFront();
         }
-        private void CargarContenidoPrincipal()
-        {
-            // Example: Load a dashboard or main menu
-            MessageBox.Show("Cargando contenido principal...", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -103,11 +99,7 @@ namespace SistemaFacturacion
             CargarControladorEnPanel(ctrEliminarProducto);
         }
 
-        //private void btnAgregarClientes_Click(object sender, EventArgs e)
-        //{
-        //    CtrAgregarCliente ctrAgregarCliente = new CtrAgregarCliente(repository);
-        //    CargarControladorEnPanel(ctrAgregarCliente);
-        //}
+      
 
         private void btnAgregarReserva_Click(object sender, EventArgs e)
         {
