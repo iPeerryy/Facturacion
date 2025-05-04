@@ -27,9 +27,16 @@ namespace SistemaFacturacion.Controllers.Reserva
         {
             try
             {
-               var reserva = new SistemaFacturacion.Models.Entities.Reserva
+                if (txtNombreCliente.Text == "")
+                {
+                    MessageBox.Show("Por favor, ingrese el nombre del cliente.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var reserva = new SistemaFacturacion.Models.Entities.Reserva
                {
-                   nombre = txtNombreCliente.Text,
+                   
+                nombre = txtNombreCliente.Text,
                    fecha = dtpFecha.Value,
                    precio = 200, 
                    estado = true 

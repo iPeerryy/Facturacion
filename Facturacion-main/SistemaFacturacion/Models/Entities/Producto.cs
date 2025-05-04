@@ -14,6 +14,7 @@ namespace SistemaFacturacion.Models.Entities
         public double precio { get; set; }
         public int cantidad { get; set; }
         public bool estado { get; set; } = false;
+        public List<ProductoPedido> Pedidos { get; set; }
 
         public interface IProducto<T>
         {

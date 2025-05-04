@@ -31,6 +31,7 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            btnAgregarPedido = new Button();
             btnAgregarReserva = new Button();
             btnEliminar = new Button();
             button3 = new Button();
@@ -39,6 +40,7 @@
             panel3 = new Panel();
             label2 = new Label();
             panelReemplazable = new Panel();
+            labelNombreEmpleado = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -46,6 +48,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(labelNombreEmpleado);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(206, 0);
@@ -65,6 +68,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnAgregarPedido);
             panel2.Controls.Add(btnAgregarReserva);
             panel2.Controls.Add(btnEliminar);
             panel2.Controls.Add(button3);
@@ -76,6 +80,17 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(206, 609);
             panel2.TabIndex = 1;
+            // 
+            // btnAgregarPedido
+            // 
+            btnAgregarPedido.Dock = DockStyle.Top;
+            btnAgregarPedido.Location = new Point(0, 319);
+            btnAgregarPedido.Name = "btnAgregarPedido";
+            btnAgregarPedido.Size = new Size(206, 55);
+            btnAgregarPedido.TabIndex = 9;
+            btnAgregarPedido.Text = "Agregar Pedido";
+            btnAgregarPedido.UseVisualStyleBackColor = true;
+            btnAgregarPedido.Click += btnAgregarPedido_Click;
             // 
             // btnAgregarReserva
             // 
@@ -161,6 +176,17 @@
             panelReemplazable.TabIndex = 2;
             panelReemplazable.Paint += panelReemplazable_Paint;
             // 
+            // labelNombreEmpleado
+            // 
+            labelNombreEmpleado.AutoSize = true;
+            labelNombreEmpleado.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            labelNombreEmpleado.Location = new Point(706, 21);
+            labelNombreEmpleado.Name = "labelNombreEmpleado";
+            labelNombreEmpleado.Size = new Size(113, 23);
+            labelNombreEmpleado.TabIndex = 1;
+            labelNombreEmpleado.Text = "Seleccione";
+            labelNombreEmpleado.Click += label3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -193,5 +219,7 @@
         private Button button3;
         private Button btnEliminar;
         private Button btnAgregarReserva;
+        private Button btnAgregarPedido;
+        private Label labelNombreEmpleado;
     }
 }

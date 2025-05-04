@@ -7,6 +7,9 @@
     <Compile Update="Controllers\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Controllers\Pedido\CtrAgregarPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Controllers\Productos\CtrAbastecerProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>

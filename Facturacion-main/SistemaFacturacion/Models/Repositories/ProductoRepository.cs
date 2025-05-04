@@ -71,5 +71,11 @@ namespace Facturacion.Models.Repositories
                 }
             }
         }
+        public Producto ObtenerPorId(int productoId) 
+        {
+            return _context.Productos.FirstOrDefault(p => p.id == productoId);
+        }
+
+
     }
 }

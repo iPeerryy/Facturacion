@@ -8,7 +8,12 @@ namespace SistemaFacturacion.Models.Entities
 {
     public class ProductoPedido
     {
-        public Producto producto { get; set; }
-        public int cantidad { get; set; }
+        public int PedidoId { get; set; }
+        public Pedido Pedido { get; set; }
+
+        public int ProductoId { get; set; }
+        public Producto Producto { get; set; }
+
+        public int Cantidad { get; set; }
     }
 }

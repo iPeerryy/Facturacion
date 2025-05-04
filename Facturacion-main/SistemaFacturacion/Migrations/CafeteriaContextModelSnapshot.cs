@@ -67,6 +67,10 @@ namespace SistemaFacturacion.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("EmpleadoCedula")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
@@ -76,22 +80,12 @@ namespace SistemaFacturacion.Migrations
                     b.Property<double>("Total")
                         .HasColumnType("float");
 
-                    b.Property<string>("empleadocedula")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("productoid")
-                        .HasColumnType("int");
-
-                    b.Property<int>("reservaid")
-                        .HasColumnType("int");
+                    b.Property<bool>("estatusReserva")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("empleadocedula");
-
-                    b.HasIndex("productoid");
-
-                    b.HasIndex("reservaid");
+                    b.HasIndex("EmpleadoCedula");
 
                     b.ToTable("Pedidos");
                 });
@@ -126,6 +120,24 @@ namespace SistemaFacturacion.Migrations
                     b.ToTable("Productos");
                 });
 
+            modelBuilder.Entity("SistemaFacturacion.Models.Entities.ProductoPedido", b =>
+                {
+                    b.Property<int>("PedidoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.HasKey("PedidoId", "ProductoId");
+
+                    b.HasIndex("ProductoId");
+
+                    b.ToTable("ProductosPedidos");
+                });
+
             modelBuilder.Entity("SistemaFacturacion.Models.Entities.Reserva", b =>
                 {
                     b.Property<int>("id")
@@ -154,27 +166,42 @@ namespace SistemaFacturacion.Migrations
 
             modelBuilder.Entity("SistemaFacturacion.Models.Entities.Pedido", b =>
                 {
-                    b.HasOne("SistemaFacturacion.Models.Entities.Empleado", "empleado")
+                    b.HasOne("SistemaFacturacion.Models.Entities.Empleado", "Empleado")
                         .WithMany()
-                        .HasForeignKey("empleadocedula");
-
-                    b.HasOne("SistemaFacturacion.Models.Entities.Producto", "producto")
-                        .WithMany()
-                        .HasForeignKey("productoid")
+                        .HasForeignKey("EmpleadoCedula")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SistemaFacturacion.Models.Entities.Reserva", "reserva")
-                        .WithMany()
-                        .HasForeignKey("reservaid")
+                    b.Navigation("Empleado");
+                });
+
+            modelBuilder.Entity("SistemaFacturacion.Models.Entities.ProductoPedido", b =>
+                {
+                    b.HasOne("SistemaFacturacion.Models.Entities.Pedido", "Pedido")
+                        .WithMany("Productos")
+                        .HasForeignKey("PedidoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("empleado");
+                    b.HasOne("SistemaFacturacion.Models.Entities.Producto", "Producto")
+                        .WithMany("Pedidos")
+                        .HasForeignKey("ProductoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("producto");
+                    b.Navigation("Pedido");
 
-                    b.Navigation("reserva");
+                    b.Navigation("Producto");
+                });
+
+            modelBuilder.Entity("SistemaFacturacion.Models.Entities.Pedido", b =>
+                {
+                    b.Navigation("Productos");
+                });
+
+            modelBuilder.Entity("SistemaFacturacion.Models.Entities.Producto", b =>
+                {
+                    b.Navigation("Pedidos");
                 });
 #pragma warning restore 612, 618
         }

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SistemaFacturacion.Controllers.Clientes;
 using SistemaFacturacion.Controllers.Login;
+using SistemaFacturacion.Controllers.Pedido;
 using SistemaFacturacion.Controllers.Productos;
 using SistemaFacturacion.Controllers.Reserva;
 using SistemaFacturacion.Models.Context;
@@ -17,8 +18,8 @@ namespace SistemaFacturacion
         private readonly CafeteriaContext _dbContext;
         private readonly ProductoRepository _repository;
         private readonly ReservaRepository R_repository;
-        private readonly ClienteRepository repository;
-        private readonly ClienteRepository C_repository;
+        private readonly Empleado _empleadoActual;
+        private readonly PedidoRepository P_repository;
         private readonly EmpleadoRepository E_repository;
 
 
@@ -26,15 +27,16 @@ namespace SistemaFacturacion
         public Form1(EmpleadoRepository empleadorepository)
         {
             InitializeComponent();
-            E_repository= empleadorepository;
+            E_repository = empleadorepository;
 
             var loginForm = new LoginForm(E_repository);
             if (loginForm.ShowDialog() != DialogResult.OK)
             {
-                
+
                 Application.Exit();
                 return;
             }
+            _empleadoActual = (Empleado)loginForm.Tag;
             var empleado = (Empleado)loginForm.Tag;
 
             MessageBox.Show($"Bienvenido, {empleado.nombre}.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -43,13 +45,12 @@ namespace SistemaFacturacion
                .Options;
             _dbContext = new CafeteriaContext(options);
             _repository = new ProductoRepository(_dbContext);
-            repository = new ClienteRepository(_dbContext);
-            C_repository = new ClienteRepository(_dbContext);
             R_repository = new ReservaRepository(_dbContext);
+            P_repository = new PedidoRepository(_dbContext);
             E_repository = new EmpleadoRepository(_dbContext);
-
+            labelNombreEmpleado.Text = empleado.nombre;
         }
-      
+
         private void CargarControladorEnPanel(UserControl controlador)
         {
             controlador.Dock = DockStyle.Fill;
@@ -57,7 +58,7 @@ namespace SistemaFacturacion
             panelReemplazable.Controls.Add(controlador);
             controlador.BringToFront();
         }
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -99,7 +100,7 @@ namespace SistemaFacturacion
             CargarControladorEnPanel(ctrEliminarProducto);
         }
 
-      
+
 
         private void btnAgregarReserva_Click(object sender, EventArgs e)
         {
@@ -108,6 +109,20 @@ namespace SistemaFacturacion
         }
 
         private void panelPrimario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAgregarPedido_Click(object sender, EventArgs e)
+        {
+            CtrAgregarPedido ctrAgregarPedido = new CtrAgregarPedido(P_repository, _repository, E_repository, R_repository, _empleadoActual);
+            CargarControladorEnPanel(ctrAgregarPedido);
+
+            
+            ctrAgregarPedido.CargarProductos();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

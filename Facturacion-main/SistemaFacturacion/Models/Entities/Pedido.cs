@@ -12,10 +12,18 @@ namespace SistemaFacturacion.Models.Entities
         public DateTime Fecha { get; set; }
         public TimeSpan Hora { get; set; }
         public double Total { get; set; }
-        public Reserva reserva { get; set; }
-        public Empleado empleado { get; set; }
-        public Producto producto { get; set; }
-        public List<ProductoPedido> productos { get; set; } = new List<ProductoPedido>();
+        public string EmpleadoCedula { get; set; }
+        public bool estatusReserva { get; set; }
+        public Empleado Empleado { get; set; }
+        public List<ProductoPedido> Productos { get; set; } = new();
 
+        public interface IPedido<T>
+        {
+            void AgregarPedido(T pedido);
+            T ObtenerPedido(int id);
+            List<T> ObtenerTodos();
+            void EliminarPedido(int id);
+            void ActualizarPedido(T pedido);
+        }
     }
 }

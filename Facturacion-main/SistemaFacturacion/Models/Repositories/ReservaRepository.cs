@@ -42,9 +42,12 @@ namespace Facturacion.Models.Repositories
                 throw new Exception("Reserva no encontrada.");
             }
         }
+        public List<Reserva> ObtenerTodos()
+        {
+            return _context.Reservas.ToList();  
+        }
 
-       
 
-      
+
     }
 }

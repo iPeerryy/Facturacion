@@ -17,9 +17,9 @@ namespace SistemaFacturacion.Models.Context
         public DbSet<Reserva> Reservas { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<Producto> Productos { get; set; }
-        public DbSet<ProductoPedido> ProductosPedidos { get; set; } 
+        public DbSet<ProductoPedido> ProductosPedidos { get; set; }
 
-
+        
         public CafeteriaContext()
         {
         }
@@ -32,6 +32,21 @@ namespace SistemaFacturacion.Models.Context
         {
             modelBuilder.Ignore<ProductoPedido>();
             modelBuilder.Ignore<Cliente>();
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ProductoPedido>()
+                .HasKey(pp => new { pp.PedidoId, pp.ProductoId });
+
+            modelBuilder.Entity<ProductoPedido>()
+                .HasOne(pp => pp.Pedido)
+                .WithMany(p => p.Productos)
+                .HasForeignKey(pp => pp.PedidoId);
+
+            modelBuilder.Entity<ProductoPedido>()
+                .HasOne(pp => pp.Producto)
+                .WithMany(p => p.Pedidos)
+                .HasForeignKey(pp => pp.ProductoId);
+
             modelBuilder.Entity<Empleado>().HasData(
                 new Empleado { nombre = "Adrian Sarcos", cedula = "4021356164", cargo = "Vendedor", salario = 30000 },
                 new Empleado { nombre = "Valeria Suarez", cedula = "402654423", cargo = "Vendedor", salario = 30000 }
