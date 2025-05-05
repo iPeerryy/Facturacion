@@ -115,7 +115,7 @@ namespace SistemaFacturacion
 
         private void btnAgregarPedido_Click(object sender, EventArgs e)
         {
-            CtrAgregarPedido ctrAgregarPedido = new CtrAgregarPedido(P_repository, _repository, E_repository, R_repository, _empleadoActual);
+            CtrAgregarPedido ctrAgregarPedido = new CtrAgregarPedido(P_repository, _repository,_empleadoActual);
             CargarControladorEnPanel(ctrAgregarPedido);
 
             

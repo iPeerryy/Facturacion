@@ -18,22 +18,28 @@ namespace Facturacion.Models.Repositories
 
         public void AgregarPedido(Pedido pedido)
         {
+
             try
             {
-                // Adjuntar el empleado existente
+                // Attach the existing Empleado entity
                 if (pedido.Empleado != null)
                 {
                     _context.Empleados.Attach(pedido.Empleado);
                 }
 
-               
-
-                // Adjuntar productos existentes para cada producto en el carrito
+                // Ensure each ProductoPedido is unique for this Pedido
                 foreach (var productoPedido in pedido.Productos)
                 {
                     if (productoPedido.Producto != null)
                     {
                         _context.Productos.Attach(productoPedido.Producto);
+                    }
+
+                    // Detach the ProductoPedido if it is already tracked
+                    var existingEntry = _context.Entry(productoPedido);
+                    if (existingEntry.State != EntityState.Detached)
+                    {
+                        existingEntry.State = EntityState.Detached;
                     }
                 }
 
@@ -44,6 +50,7 @@ namespace Facturacion.Models.Repositories
             {
                 throw new InvalidOperationException("Error adding the pedido to the database. Ensure the related entities already exist and primary keys are not duplicated.", ex);
             }
+
         }
 
 
