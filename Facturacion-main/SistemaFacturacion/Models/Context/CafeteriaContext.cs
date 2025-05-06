@@ -32,6 +32,7 @@ namespace SistemaFacturacion.Models.Context
         {
             modelBuilder.Ignore<ProductoPedido>();
             modelBuilder.Ignore<Cliente>();
+
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<ProductoPedido>()

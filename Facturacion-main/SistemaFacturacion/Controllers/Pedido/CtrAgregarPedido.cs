@@ -100,6 +100,7 @@ namespace SistemaFacturacion.Controllers.Pedido
             {
                 MessageBox.Show("Error: No se pudo generar el archivo PDF.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            _pedidoRepository.ResetContext();
             MessageBox.Show("ID del pedido: " + pedido.Id);
             carrito.Clear();
             MostrarCarrito();

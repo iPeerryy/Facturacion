@@ -20,10 +20,11 @@ namespace SistemaFacturacion.Models.Entities
         public interface IPedido<T>
         {
             void AgregarPedido(T pedido);
-            T ObtenerPedido(int id);
+            
             List<T> ObtenerTodos();
             void EliminarPedido(int id);
             void ActualizarPedido(T pedido);
+            void ResetContext();
         }
     }
 }
